@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil com Boostrap</title>
+    <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@.5.3.2/
+    dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h1 class="display-4">Perfil do Usuário</h1>
+                <button id="toggle-profile" class="bnt bnt-primary mt-3">Mostrar Perfil</button>
+        </div>
+        </div>
+        <div id="profile-info" class="card shadow-lg p-4">
+            <h2 class="card-title text-center">Elielson Pereira</h2>
+            <p><strong>Email:</strong> elielsonpereira183@gmail.com</p>
+            <p><strong>Telefone:</strong> (83) 98163-1151</p>
+            <p><strong>Endereço:</strong> Rua irineu dias, 505, Mamanguape,PB</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#toggle-profile").click(function() {
+                $("#profile-info").slideToggle(300);
+      const buttonText = $("#profile-info").is(":visible") ? "Ocultar Perfil" : "Mostra Perfil";
+      $(this).text(buttonText);
+    });
+  });
+    </script>
+</body>
+</html>
